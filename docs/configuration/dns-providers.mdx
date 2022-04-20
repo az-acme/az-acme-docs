@@ -1,0 +1,40 @@
+---
+sidebar_position: 5
+title: DNS Providers
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Azure DNS is the only supported DNS provider at this point. Additional DNS providers may be added if there is demand. Using Azure 
+
+## Provider Configuration
+
+### Azure DNS 
+
+DNS enables the configuration, and security model to remain simple and consistent through use of the Azure RBAC model.
+
+<Tabs>
+  <TabItem value="default" label="Default" default>
+
+In standard usage, the below are the parameters used to configure the Azure DNS resource to be used for DNS challenges. The zone name is infered from the name of the Azure DNS resource.
+
+| Parameter | Example | Description |
+|----|----|----|
+| ```--azure-dns-zone``` | Resource Id | Full resource ID of the Azure DNS zone to be used |
+
+  </TabItem>
+  <TabItem value="delegated" label="Delegated Zone">
+    
+With delegated zones, the addition parameter is required to instruct the tool to generate the TXT record names from the delegated zone name provided rather than the resource name of the Azure DNS Zone.
+
+| Parameter | Example | Description |
+|----|----|----|----|
+| ```--azure-dns-zone``` | Resource Id | Full resource ID of the Azure DNS zone to be used |
+| ```--delegated-zone```  |  azacme.dev | Zone name that the ```--azure-dns-zone``` has been delegated from. |
+
+  </TabItem>
+</Tabs>
+
+
+

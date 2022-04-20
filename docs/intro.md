@@ -1,21 +1,55 @@
 ---
 sidebar_position: 1
+title: Home
 ---
 
-# Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Welcome
+
+While there are many ACMI clients that exist, ```az-acme``` is different in that it has been designed from the outset with a focus on Microsoft Azure and aligned to the following goals.
+
+- Replicate certificate management capabilities for ACMI based certificate issuers that exist natively between Azure Key Vault and Digicert / GlobalSign.
+- Store certificates in Azure Key Vault to enable existing Azure native integrations between services and Azure Key Vault to operate as expected.
+- Separate TLS certificate management processes from Azure compute resources. This means *only* ACME DNS challenges are supported.
+
+The following shows how ```az-acme``` fits within the wider certificate management context. To certificate consumers, there is no difference between using a certificate managed by an Azure Key Vault native issuer (Digicert / GlobalSign) and those obtained from an ACMI based issuer via ```az-acme```(s).
+
+![](https://raw.githubusercontent.com/az-acme/az-acme-cli/main/docs/context.drawio.svg)
 
 ## Getting Started
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
 ### What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- [Azure Account](https://portal.azure.com) or free trial.
+- Azure Key Vault and Azure DNS Resources.
+  - For a step by step guide see here
+- A domain you own and can configure DNS for. 
+
+### Download az-acme cli
+
+The latest version of the ```az-acme``` cli is available for download from the GitHub.
+
+<Tabs>
+  <TabItem value="browser" label="Browser" default>
+    Download the latest CLI for your OS from GitHub
+  </TabItem>
+  <TabItem value="ps" label="Powershell Core">
+
+```
+console.log('Every repo must come with a mascot.');
+```
+  </TabItem>
+  <TabItem value="bash" label="Bash">
+
+```bash
+console.log('Every repo must come with a mascot.');
+```
+  </TabItem>
+</Tabs>
 
 ## Generate a new site
 
