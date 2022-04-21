@@ -52,9 +52,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'introduction/why',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {

@@ -3,28 +3,35 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+ 
 
-/* You can override the default Infima variables here. */
+/* You can override the default Infima variables here. https://docusaurus.io/docs/styling-layout/*/
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #3d4849;
+  --ifm-color-primary-dark: #374142;
+  --ifm-color-primary-darker: #343d3e;
+  --ifm-color-primary-darkest: #2b3233;
+  --ifm-color-primary-light: #434f50;
+  --ifm-color-primary-lighter: #465354;
+  --ifm-color-primary-lightest: #4f5e5f;
   --ifm-code-font-size: 95%;
+  --ifm-link-color: var(--ifm-color-primary-dark);
+  --ifm-link-hover-color: var(--ifm-color-primary);
+  --ifm-menu-color: var(--ifm-color-primary-dark);
+  --ifm-menu-color-active: var(--ifm-color-primary-dark);
+  --ifm-menu-color-background-active: var(--ifm-menu-color-background-hover);
+  --ifm-heading-font-weight: 600;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #f9f9f9;
+  --ifm-color-primary-dark: #e0e0e0;
+  --ifm-color-primary-darker: #d4d4d4;
+  --ifm-color-primary-darkest: #aeaeae;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
 }
 
 .docusaurus-highlight-code-line {
@@ -36,4 +43,15 @@
 
 [data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu__link {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.markdown a:not(.card) {
+  color: var(--ifm-color-primary-dark);
+  font-weight: 600;
+  text-decoration: underline;
 }
