@@ -6,9 +6,15 @@ title: Authentication
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Authentication with Azure can be achieved through the following mechanisms. 
+Internally, the CLI leveages the .NET [DefaultAzureCredential](https://docs.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet) class which will attempt to athenticate based on various approaches automatically. Two of the most common are outlined in the following sections. 
 
-### Azure CLI (Recommended)
+:::note
+
+**Visual Studio** and **Visual Studio Code** credential sources for **DefaultAzureCredential** are disabled.
+
+:::
+
+### Azure CLI
 
 Use the Azure CLI to perform login to the Azure environment. 
 
@@ -20,11 +26,6 @@ az login
 
 Credentials for a service principal can be set using the following environment variables.
 
-:::caution
-
-The values of these environment variables are sensitive and should not ever be stored in clear text.
-
-:::
-
-```EVN1``` - The bla<br/>
-```EVN2``` - The bla
+```AZURE_TENANT_ID``` - The tenant from the service principal.<br/>
+```AZURE_CLIENT_ID``` - The appId from the service principal.<br/>
+```AZURE_CLIENT_SECRET``` - The password from the service principal.<br/>
