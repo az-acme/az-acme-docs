@@ -1,6 +1,7 @@
 ---
-sidebar_position: 1
-title: Why Az-Acme?
+sidebar_position: 2
+title: Architecture
+description: Architecture and designs goals for Az-Acme
 ---
 
 While there are many ACMI clients that exist, ```az-acme``` is different in that it has been designed from the outset with a focus on Microsoft Azure and aligned to the following goals.

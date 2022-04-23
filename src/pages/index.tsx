@@ -13,11 +13,18 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+
+        <div className='hero__subtitle'>
+        <div >
+            <img src="https://github.com/az-acme/az-acme-cli/raw/main/docs/force-order.gif" style={{maxHeight: 400 + 'px' }} />
+          </div>
+        </div>
+
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/category/getting-started">
+            Get Started Now
           </Link>
         </div>
       </div>
@@ -32,6 +39,10 @@ export default function Home(): JSX.Element {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
+      <div>
+        <div>
+        </div>
+      </div>
       <main>
         <HomepageFeatures />
       </main>

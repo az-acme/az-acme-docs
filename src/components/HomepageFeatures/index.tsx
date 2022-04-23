@@ -1,51 +1,52 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import DocusaurusImageUrl from '@site/static/img/ACME-protocol-icon.png';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg?: React.ComponentType<React.ComponentProps<'svg'>>;
+  ImageUri?: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Design for Microsoft Azure',
+    Svg: require('@site/static/img/microsoft-azure-seeklogo.com.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Az-Acme has been designed from the ground up as an opinionated approach to ACMI certificate management in Microsoft Azure.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'ACMI Compliant',
+    // Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    ImageUri: DocusaurusImageUrl,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Az-Acme uses the ACMI protocol for certificate operations, meaning you can use your preferred issuer, not just Let's Encrypt.
       </>
     ),
   },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
+  // {
+  //   title: 'Flexible Execution',
+  //   Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+  //   description: (
+  //     <>
+  //       Run Az-Acme is a standalone CLI to allow you to choose how you want to automated it, or use the GitHub action for no-fuss usage. 
+  //     </>
+  //   ),
+  // },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, ImageUri, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        { Svg ? <Svg className={styles.featureSvg} role="img" /> : null }
+        { ImageUri? <img src={ImageUri} className={styles.featureImg} role="img" /> : null }
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

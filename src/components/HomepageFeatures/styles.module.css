@@ -3,9 +3,17 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 120px;
+  width: 120px;
+  padding: 15px;
+}
+
+.featureImg {
+  height: 120px;
+  width: 120px;
 }
