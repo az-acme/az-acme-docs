@@ -12,11 +12,11 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Design for Microsoft Azure',
+    title: 'Designed for Microsoft Azure',
     Svg: require('@site/static/img/microsoft-azure-seeklogo.com.svg').default,
     description: (
       <>
-        Az-Acme has been designed from the ground up as an opinionated approach to ACMI certificate management in Microsoft Azure.
+        Az-Acme has been designed from the ground up to leverage Azure Key Vault for certificate mangement, and Azure DNS for challenges.
       </>
     ),
   },
@@ -60,7 +60,7 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className="features row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
