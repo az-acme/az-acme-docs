@@ -74,6 +74,14 @@ html[data-theme='dark'] .header-github-link:before {
     no-repeat;
 }
 
-.features.row {
-  justify-content: center;
+
+.console {
+  max-height: 350px;
+  border: solid 6px #000000
 }
+
+
+.hero--primary {
+  --ifm-hero-background-color: #F9F9F9;
+  --ifm-hero-text-color: var(--ifm-font-color-base);
+  }

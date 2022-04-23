@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
-import DocusaurusImageUrl from '@site/static/img/ACME-protocol-icon.png';
+import AcmiImageUri from '@site/static/img/ACME-protocol-icon.png';
 
 type FeatureItem = {
   title: string;
@@ -12,33 +12,33 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Designed for Microsoft Azure',
-    Svg: require('@site/static/img/microsoft-azure-seeklogo.com.svg').default,
+    title: 'Microsoft Azure First',
+    Svg: require('@site/static/img/microsoft-azure.svg').default,
     description: (
       <>
-        Az-Acme has been designed from the ground up to leverage Azure Key Vault for certificate mangement, and Azure DNS for challenges.
+        Designed from the ground up to leverage <b>Azure Key Vault</b> for secrets and certificate operations. It's like the missing ACME issuer for Azure Key Vault.
       </>
     ),
   },
   {
-    title: 'ACMI Compliant',
+    title: 'Standards Based',
     // Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    ImageUri: DocusaurusImageUrl,
+    ImageUri: AcmiImageUri,
     description: (
       <>
-        Az-Acme uses the ACMI protocol for certificate operations, meaning you can use your preferred issuer, not just Let's Encrypt.
+        Az-Acme uses the ACMI protocol for certificate operations so you can use <b>your preferred ACMI issuer</b>, not just Let's Encrypt.
       </>
     ),
   },
-  // {
-  //   title: 'Flexible Execution',
-  //   Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-  //   description: (
-  //     <>
-  //       Run Az-Acme is a standalone CLI to allow you to choose how you want to automated it, or use the GitHub action for no-fuss usage. 
-  //     </>
-  //   ),
-  // },
+  {
+    title: 'Use Existing Automation Tools',
+    Svg: require('@site/static/img/github-actions.svg').default,
+    description: (
+      <>
+        Use <b>GitHub Actions, Azure Pipelines</b> or <b>your automation tool</b> of choice. No need to add more infrastructure to manage and monitor.
+      </>
+    ),
+  },
 ];
 
 function Feature({title, Svg, ImageUri, description}: FeatureItem) {

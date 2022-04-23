@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'AZ ACME',
-  tagline: 'The missing ACME Issuer for Azure Key Vault',
+  tagline: 'The simplest ACME Issuer for Azure Key Vault.',
   url: 'https://azacme.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
