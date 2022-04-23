@@ -13,3 +13,5 @@ While there are many ACMI clients that exist, ```az-acme``` is different in that
 The following shows how ```az-acme``` fits within the wider certificate management context. To certificate consumers, there is no difference between using a certificate managed by an Azure Key Vault native issuer (Digicert / GlobalSign) and those obtained from an ACMI based issuer via ```az-acme```(s).
 
 ![](https://raw.githubusercontent.com/az-acme/az-acme-cli/main/docs/context.drawio.svg)
+
+The ```az-acme``` CLI can be added to existing CI/CD or automation tools and scheduled to run every 12 hours to perform the renewal checks as requried. Using existing operational tools means alerting and notifications have already been established, making it simpler to introduce and run across teams.
