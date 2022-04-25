@@ -48,8 +48,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="Simplest way to implement ACMI compliant certificate management for Azure Key Vault">
       <HomepageHeader />
       <div>
         <div>
