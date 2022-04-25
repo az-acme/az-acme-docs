@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import OrderConsoleImage from '@site/static/img/force-order.gif'
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -21,7 +22,7 @@ function HomepageHeader() {
             <span>✔</span> Opinioned about Azure, but not how you schedule the <code>az-acme</code> CLI.<br/>
           </p>
         <div >
-            <img src="https://github.com/az-acme/az-acme-cli/raw/main/docs/force-order.gif" className="console" />
+            <img src={OrderConsoleImage} className="console" />
           </div>
         </div>
 
@@ -29,7 +30,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/architecture">
+            to="/docs/introduction">
             <b>See how it works</b>
           </Link>&nbsp;&nbsp;&nbsp;
           <Link
@@ -47,8 +48,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="Simplest way to implement ACMI compliant certificate management for Azure Key Vault">
       <HomepageHeader />
       <div>
         <div>

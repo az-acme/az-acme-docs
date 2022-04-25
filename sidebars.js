@@ -32,7 +32,6 @@ const sidebars = {
       collapsed: false
     },
     'operations',
-    'architecture',
     {
       label: 'Configuration',
       type: 'category',
