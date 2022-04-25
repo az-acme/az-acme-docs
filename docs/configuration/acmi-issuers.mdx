@@ -6,12 +6,24 @@ description: ACMI compliant issuers that have been verified.
 
 ## Verified Issuers
 
-ACMI is a standardised protocol meaning that ```az-acmi``` *should* work with any ACMI issuer that has implemented the standard, and supports ```az-acmi``` requirements such as supporting DNS01 challenges. If you have validated any other issues in addition to the below, feel free to raise a PR on this page and let us know!
+ACMI is a standardised protocol meaning that ```az-acmi``` *should* work with any ACMI issuer that has implemented the standard, and supports ```az-acmi``` requirements such as supporting DNS01 challenges. If you have validated any other issues in addition to the below, feel free to raise a PR to update.
 
 ### Lets Encrypt
 
+Registration with Lets Encrypt follows the [Simple](../operations.md#simple-registration) registration flow. 
+
+The supported ```--server``` parameters are: 
+
+- **Production:** https://acme-v02.api.letsencrypt.org/directory
+- **Staging:** https://acme-staging-v02.api.letsencrypt.org/directory
+
+
 ### ZeroSSL
 
+Registration with ZeroSSL requires the [External Account Binding](../operations.md#external-account-binding-eab) registration flow. Refer to [ZeroSSL Acme Documentation](https://zerossl.com/documentation/acme/) for process to generate EAB details before registering.
 
+The supported ```--server``` parameters are: 
 
+- https://acme.zerossl.com/v2/DV90
 
+See [External Account Binding](../operations.md#external-account-binding-eab) for ways to provide the EAB information via parameters or environment variables.
