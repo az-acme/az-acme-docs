@@ -17,9 +17,10 @@ function HomepageHeader() {
 
         <div>
           <p>
+            <span>✔</span> Simple standalone CLI for flexible usage.<br/>
+            <span>✔</span> Leverage Azure Key Vault for all Certificate and Secret storage.<br/>
             <span>✔</span> Use your existing CI/CD or automation tool of choice for certificate operations.<br/>
-            <span>✔</span> Keep things simple with standalone CLI. Avoid provisioning additional compute resources.<br/>
-            <span>✔</span> Opinioned about Azure, but not how you schedule the <code>az-acme</code> CLI.<br/>
+            
           </p>
         <div >
             <img src={OrderConsoleImage} className="console" />

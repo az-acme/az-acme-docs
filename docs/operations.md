@@ -123,6 +123,18 @@ az-acme.exe register `
         --agree-terms
 ```
 
+The following shows the alternative approach to map enviroment variables to specific secrets from Azure Key Vault using the ```--env-from-secrets``` parameter.
+
+```text
+az-acme.exe register `
+        --server https://acme.zerossl.com/v2/DV90 `
+        --key-vault-uri https://kvazacmedev.vault.azure.net/ `
+        --account-secret az-amce-registration `
+        --email demo@azacme.dev `
+        --env-from-secrets AZ_ACME_EAB_KID=zerossl-eab-kid AZ_ACME_EAB_KEY=zerossl-eab-key `
+        --agree-terms
+```
+
 For full options available run the help command.
 
 ```text
@@ -143,6 +155,17 @@ az-acme register \
         --agree-terms
 ```
 
+The following shows the alternative approach to map enviroment variables to specific secrets from Azure Key Vault using the ```--env-from-secrets``` parameter.
+
+```bash
+az-acme register \
+        --server https://acme.zerossl.com/v2/DV90 \
+        --key-vault-uri https://kvazacmedev.vault.azure.net/ \
+        --account-secret az-amce-registration \
+        --email demo@azacme.dev \
+        --env-from-secrets AZ_ACME_EAB_KID=zerossl-eab-kid AZ_ACME_EAB_KEY=zerossl-eab-key \
+        --agree-terms
+```
 
 For full options available run the help command.
 
@@ -188,7 +211,7 @@ az-acme.exe help order
   <TabItem value="bash" label="Linux">
 
 ```bash
-az-acme.exe order \
+az-acme order \
         --server https://acme-v02.api.letsencrypt.org/directory \
         --key-vault-uri https://kvazacmedev.vault.azure.net/ \
         --certificate demo-certificate \
@@ -199,7 +222,6 @@ az-acme.exe order \
         --azure-dns-zone /subscriptions/xxxxx/resourceGroups/xxxx/providers/Microsoft.Network/dnszones/demo.azacme.dev \
         --renew-within-days 30
 ```
-
 
 For full options available run the help command.
 

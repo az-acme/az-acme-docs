@@ -35,7 +35,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/github-actions.svg').default,
     description: (
       <>
-        Use <b>GitHub Actions, Azure Pipelines</b> or <b>your automation tool</b> of choice. No need to add more infrastructure to manage and monitor.
+        Use GitHub Actions, Azure Pipelines or your automation tool of choice. <b>No need to add more infrastructure</b> to manage and monitor.
       </>
     ),
   },
