@@ -19,8 +19,23 @@ It is recommended to use private agents if possible so you can restirct the Azur
 A complete example of using the GitHub Action is shown below, including using the [azure/login@v1](https://github.com/marketplace/actions/azure-login) action for authentication.
 
 
-:::info
+```
 
-Finalising the GitHub Action. Coming soon.
+steps:
+- uses: az-acme/setup-cli-actionh@v1
+  with:
+    version: 0.2
 
-:::
+- uses: azure/login@v1
+  with:
+    creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+- name: Register with Staging
+  run: |
+    az-acme register \
+      --server https://acme-staging-v02.api.letsencrypt.org/directory \
+      --key-vault-uri https://kvazacmedev.vault.azure.net/ \
+      --account-secret letsencrypt-stg-registration \
+      --email demo@azacme.dev \
+      --agree-tos
+```
