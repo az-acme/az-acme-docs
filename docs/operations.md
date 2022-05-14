@@ -79,7 +79,7 @@ Provide an email address as part of the registration process.
           --key-vault-uri https://kvazacmedev.vault.azure.net/ `
           --account-secret az-amce-registration `
           --email demo@azacme.dev `
-          --agree-terms
+          --agree-tos
 ```
 
 ```text
@@ -94,7 +94,7 @@ az-acme register \
         --key-vault-uri https://kvazacmedev.vault.azure.net/ \
         --account-secret az-amce-registration \
         --email demo@azacme.dev \
-        --agree-terms
+        --agree-tos
 ```
 For full options available run the help command.
 
@@ -120,7 +120,7 @@ az-acme.exe register `
         --email demo@azacme.dev `
         --eab-kid [keyid] `
         --eab-hmac-key [key] `
-        --agree-terms
+        --agree-tos
 ```
 
 The following shows the alternative approach to map enviroment variables to specific secrets from Azure Key Vault using the ```--env-from-secrets``` parameter.
@@ -132,7 +132,7 @@ az-acme.exe register `
         --account-secret az-amce-registration `
         --email demo@azacme.dev `
         --env-from-secrets AZ_ACME_EAB_KID=zerossl-eab-kid AZ_ACME_EAB_KEY=zerossl-eab-key `
-        --agree-terms
+        --agree-tos
 ```
 
 For full options available run the help command.
@@ -152,7 +152,7 @@ az-acme register \
         --email demo@azacme.dev \
         --eab-kid [keyid] \
         --eab-hmac-key [key] \
-        --agree-terms
+        --agree-tos
 ```
 
 The following shows the alternative approach to map enviroment variables to specific secrets from Azure Key Vault using the ```--env-from-secrets``` parameter.
@@ -164,7 +164,7 @@ az-acme register \
         --account-secret az-amce-registration \
         --email demo@azacme.dev \
         --env-from-secrets AZ_ACME_EAB_KID=zerossl-eab-kid AZ_ACME_EAB_KEY=zerossl-eab-key \
-        --agree-terms
+        --agree-tos
 ```
 
 For full options available run the help command.
@@ -194,7 +194,7 @@ az-acme.exe order `
         --subject stgle01.demo.azacme.dev `
         --sans stgle002.demo.azacme.dev stgle003.demo.azacme.dev `
         --account-secret reg-le-stg-azacme-dev `
-        --dns-provider azure `
+        --dns-provider Azure `
         --azure-dns-zone /subscriptions/xxxxx/resourceGroups/xxxx/providers/Microsoft.Network/dnszones/demo.azacme.dev `
         --renew-within-days 30
 
@@ -218,7 +218,7 @@ az-acme order \
         --subject stgle01.demo.azacme.dev \
         --sans stgle002.demo.azacme.dev stgle003.demo.azacme.dev \
         --account-secret reg-le-stg-azacme-dev \
-        --dns-provider azure \
+        --dns-provider Azure \
         --azure-dns-zone /subscriptions/xxxxx/resourceGroups/xxxx/providers/Microsoft.Network/dnszones/demo.azacme.dev \
         --renew-within-days 30
 ```
